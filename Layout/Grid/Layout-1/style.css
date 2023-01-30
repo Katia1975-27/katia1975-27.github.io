@@ -1,0 +1,53 @@
+      /*
+GENERIC RULES
+*/
+:root{
+    box-sizing: border-box;
+}
+::before,
+::after{
+    box-sizing: inherit;
+}
+
+
+
+/*sempre così --> la pagina si espande sempre fino ad un massimo 1080px*/
+
+/* GRID */
+
+
+.grid{
+    margin-top: 1.5em;
+}
+
+.grid > * {
+    background-color: brown;
+    color: white;
+    padding: 2em;
+    border-radius: 0.5em;
+}
+
+.named-grid-area > .d {
+    grid-column: aside1;
+    grid-row: main;
+    background-color:beige;
+}
+
+.named-grid-area > .e {
+    grid-column: aside2;
+    grid-row: main;
+    background-color: blue;
+}
+
+        .named-grid-area{
+            display: grid;
+            grid-template-columns: "aaa title"
+                                   "nav uuu"
+                                   "main aside1"
+                                   "main aside2";
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: repeat(4 auto);
+            grid-gap: 0.5em;                                
+        }
+
+ 

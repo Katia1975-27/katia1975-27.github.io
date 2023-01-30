@@ -1,0 +1,171 @@
+/*
+initial setting
+*/
+:root{
+    /*Utilizzare root invece di html root equivale a HTML
+    assegnare border-box; ci garntisce di lavorare con la dimensione dell'elemento calcolata sul border che comprende il paddign
+    border-box non è una proprietà che si ereedita
+    */
+    box-sizing: border-box;
+}
+
+::before,
+::after{
+    /*per eriditare border-box */
+box-sizing: inherit;
+}
+
+/* su tutti gli elemnti DENTRO body -- non body */
+body * + * {
+margin-top: 1.5em;
+} 
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/*
+Custom CSS
+*/
+body{
+    background-color: blanchedalmond;
+    font-family: Calibri, sans-serif;  /* dove non 'è Calibri prende sans-serify*/    
+}
+
+/*
+Nav Section
+*/
+.site-nav{
+    display: flex;
+    padding: .5em;
+    list-style-type: none;  /* con questo tolgo l'elenco puntato all'elemento li */
+    background-color: coral;
+    border-radius: .2em;
+}
+ul.site-nav > li {
+    margin-top: 0;
+}
+ul.site-nav > li > a{
+    display: block;
+    padding: .5em 1em; /*topbottom e laterale */
+    background-color: darkgreen;
+    color: white;
+    text-decoration: none;
+}
+
+ul.site-nav > li > a:hover{
+    background-color: rgb(226, 129, 10);
+}
+
+ul.site-nav> li + li {
+    margin-left: .5em;
+}
+
+ul.site-nav > .nav-right{
+    margin-left: auto;  /* estende il margine destro fino a riempire il main */
+}
+
+/* MAIN 
+Flex container
+*/
+main{
+    display: flex;
+}
+
+/* flex item */
+main > * + * {
+    margin-top: 0;
+    margin-left: 1.5em;
+}
+
+.tile{
+    background-color: white;
+    padding: 1.5em;
+}
+
+.tile :first-child{
+    margin-top: 0;
+}
+/* queste sotto sono importanti */
+.column-main{
+    flex: 3;  /* grow*/
+}
+
+.column-sidebar{
+    flex: 1; /*shrink */
+}
+
+.column-sidebar{
+    display: flex;
+    flex-direction: column;  /* --> disporre gli elementi in verticale */
+}
+
+.column-sidebar > .tile{
+    flex: 1;
+}
+
+/*sidebar */
+.login-form h3{
+   margin: 0;
+   font-size: .9em;
+   font-weight: bold;
+   text-transform: uppercase;
+   text-align: right;
+}
+
+.login-form label{
+    display:block;
+    text-align: left;
+    font-weight: bold;
+}
+
+.login-form input[type="text"], .login-form input[type="password"]{
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    border: 1px solid #dedede;
+    padding: .5em 1em;
+}
+
+.centered{
+    text-align: center;
+}
+
+.special-offer{
+    display: flex;
+    flex-direction: column; 
+}
+.cost{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /*orizzontale */
+    align-items: center; /*verticale */ 
+}
+
+.cost > span{
+    margin-top: 0;
+    display: block;
+    line-height: 6;
+}
+
+.cost-currency{
+    font-size: 2em;
+}
+
+.cost-dollar{
+    font-size: 4em;
+}
+
+.cost-cents{
+    font-size: 1.5em;
+    align-self: flex-start;
+}
+
+a.cta-button {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+    text-decoration: none;
+    padding: .5em 1em;
+}

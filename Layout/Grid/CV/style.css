@@ -1,0 +1,78 @@
+/* GENERIC RULES */
+:root{
+    box-sizing: border-box;
+}
+
+::before,
+::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: Arial,  sans-serif;
+}
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+    margin: 0;
+    display: block;   /* manda a capo tutto quello che c'è dopo*/
+}
+
+/* GRID */
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(5 auto);
+    grid-gap: 1.5em;
+    border-color: black ;
+    border-style:double;
+}
+
+header{
+    display: flex;
+    background-color:beige;
+    color: blue;
+    border-color: black;
+    border-style: dotted;
+}
+
+header > h1{
+    font-weight: bold;
+    font-size: 1.5em;
+
+}
+
+header{
+    grid-column: 2/3;
+    grid-row: span 1; 
+}
+
+img{
+    flex: 1;
+    object-fit: cover;
+}
+
+.dettaglio{
+    grid-column: 2/3;
+    /* grid-row: 2/4; */
+}
+.color-blu{
+    color: blue;
+    font-style: normal;    
+}
+
+.sintesi > h1 {
+    color: blue;
+
+}
+
+.esperienza > h1{
+    color: blue;
+    text-transform: uppercase;
+
+}
