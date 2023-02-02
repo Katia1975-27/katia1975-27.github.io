@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        :root {
+            box-sizing: border-box;
+        }
+        ::before,
+        ::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            background-color:beige;   
+            font-family:  Calibri, sans-serif;             
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card {
+            padding: .5em;
+            max-width: 15em;
+            background-color: white;
+            margin-right: 10px;
+            box-shadow: 5px 10px 25px -16px;
+        }
+
+        .card img{
+            max-width: 100%;
+        }
+
+        /* TRASFORM */
+        .container .card:hover{
+            /* animation-name: animate-card-example;
+            animation-duration: 1s;
+            cursor: pointer;
+            transform-style: preserve-3d; */
+            animation-name: animate-card-3d-example;
+            animation-duration: 1s;
+            cursor: pointer;
+        }
+
+        .container{
+            perspective: 400px;
+            perspective-origin: bottom;
+        }
+
+        .container .card{
+            transform: rotateY(0deg) rotateY(0deg);
+
+        }
+
+        @keyframes animate-card-3d-example{
+
+            0% {
+                transform: rotateX(0deg);
+                opacity: 1;
+                filter: blur(0);
+            }
+            50% {
+                transform: rotateX(30deg);
+                opacity: 0.5;
+                filter: blur(1px) brightness(0.4) drop-shadow(16px 16px 10px blue);
+            }
+  
+            100% {
+                transform: rotateX(0deg);
+                opacity: 1;
+                filter: blur(0);
+            }
+        }
+
+        @keyframes animate-card-example{
+
+0% {
+    transform: rotate(0) translateX(0) scale(1, 1);
+}
+25% {
+    transform: rotate(-20deg) translateX(-10px) scale1(1.2, 1.2);
+
+}
+75% {
+    transform: rotate(20deg) translateX(10px) scale(1.2, 1.2);
+
+}
+100% {
+    transform: rotate(0deg) translateX(0px) scale(1, 1);
+}
+}
+
+body > div > p {
+    columns: 2;
+    background-color:brown;
+    padding: 40px
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="../Layout/Grid/Layout-2/img/AdobeStock_476250947_Preview.jpeg" alt="gatto">
+            <h4>Gatto 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus quam pellentesque nec nam. Odio ut enim blandit volutpat maecenas. Arcu risus quis varius quam quisque id. Amet mauris commodo quis imperdiet massa tincidunt nunc. Id diam vel quam elementum pulvinar etiam non quam. Suscipit tellus mauris a diam maecenas. Lobortis scelerisque fermentum dui faucibus in. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. A erat nam at lectus. At urna condimentum mattis pellentesque id. Vel quam elementum pulvinar etiam non quam lacus. A lacus vestibulum sed arcu non odio. Nisi scelerisque eu ultrices vitae auctor eu augue. Orci eu lobortis elementum nibh tellus molestie. Pharetra convallis posuere morbi leo. Gravida neque convallis a cras semper auctor.</p>
+        </div>
+        <div class="card">
+            <img src="../Layout/Grid/Layout-2/img/AdobeStock_476250947_Preview.jpeg" alt="gatto">
+            <h4>Gatto 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus quam pellentesque nec nam. Odio ut enim blandit volutpat maecenas. Arcu risus quis varius quam quisque id. Amet mauris commodo quis imperdiet massa tincidunt nunc. Id diam vel quam elementum pulvinar etiam non quam. Suscipit tellus mauris a diam maecenas. Lobortis scelerisque fermentum dui faucibus in. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. A erat nam at lectus. At urna condimentum mattis pellentesque id. Vel quam elementum pulvinar etiam non quam lacus. A lacus vestibulum sed arcu non odio. Nisi scelerisque eu ultrices vitae auctor eu augue. Orci eu lobortis elementum nibh tellus molestie. Pharetra convallis posuere morbi leo. Gravida neque convallis a cras semper auctor.</p>
+        </div>
+        <div class="card">
+            <img src="../Layout/Grid/Layout-2/img/AdobeStock_476250947_Preview.jpeg" alt="gatto">
+            <h4>Gatto 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus quam pellentesque nec nam. Odio ut enim blandit volutpat maecenas. Arcu risus quis varius quam quisque id. Amet mauris commodo quis imperdiet massa tincidunt nunc. Id diam vel quam elementum pulvinar etiam non quam. Suscipit tellus mauris a diam maecenas. Lobortis scelerisque fermentum dui faucibus in. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. A erat nam at lectus. At urna condimentum mattis pellentesque id. Vel quam elementum pulvinar etiam non quam lacus. A lacus vestibulum sed arcu non odio. Nisi scelerisque eu ultrices vitae auctor eu augue. Orci eu lobortis elementum nibh tellus molestie. Pharetra convallis posuere morbi leo. Gravida neque convallis a cras semper auctor.</p>
+        </div>
+    </div>
+
+    <div >
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus quam pellentesque nec nam. Odio ut enim blandit volutpat maecenas. Arcu risus quis varius quam quisque id. Amet mauris commodo quis imperdiet massa tincidunt nunc. Id diam vel quam elementum pulvinar etiam non quam. Suscipit tellus mauris a diam maecenas. Lobortis scelerisque fermentum dui faucibus in. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. A erat nam at lectus. At urna condimentum mattis pellentesque id. Vel quam elementum pulvinar etiam non quam lacus. A lacus vestibulum sed arcu non odio. Nisi scelerisque eu ultrices vitae auctor eu augue. Orci eu lobortis elementum nibh tellus molestie. Pharetra convallis posuere morbi leo. Gravida neque convallis a cras semper auctor.</p>
+    </div>
+</body>
+</html>
