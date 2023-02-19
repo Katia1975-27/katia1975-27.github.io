@@ -13915,4 +13915,8 @@ textarea.form-control-lg {
   --bs-highlight-bg: #fff3cd;
 }
 
+.card-deck {
+  background-color: red;
+}
+
 /*# sourceMappingURL=main.built.css.map */
